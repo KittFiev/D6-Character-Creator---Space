@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module name="Example Template">
+  <skills>
+    <group name="Agility">
+      <skill>acrobatics</skill>
+      <skill>brawling</skill>
+      <skill>dodge</skill>
+      <skill>firearms</skill>
+      <skill>flying/0-G</skill>
+      <skill>melee combat</skill>
+      <skill>missile weapons</skill>
+      <skill>riding</skill>
+      <skill>running</skill>
+      <skill>sleight of hand</skill>
+      <skill>throwing</skill>
+    </group>
+    <group name="Strength">
+      <skill>climb/jump</skill>
+      <skill>lift</skill>
+      <skill>stamina</skill>
+      <skill>swim</skill>
+    </group>
+  </skills>
+</module>

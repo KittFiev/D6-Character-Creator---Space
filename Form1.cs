@@ -15,62 +15,51 @@ namespace D6_Character_Creator___Space
         public MainFormContainer()
         {
             InitializeComponent();
+            //this.Shown += CreateButtonDelegate;
+            CreateButtonDelegate();
+
+        }
+
+        private void CreateButtonDelegate()
+        {
+
+            for (int i = 0; i < 5; i++)
+            {
+
+                Button newButton = new Button();
+                
+                newButton.Text = "fuck you buttons" + (i+1);
+                newButton.Name = "nButton" + i;
+                
+                newButton.Size = new Size(50, 80);
+
+                newButton.Location = new Point(0, newButton.Size.Height*i);
+
+                this.tabPage6.Controls.Add(newButton);
+
+            }
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void titleAndTextField1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void titleAndTextTransparent1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void titleAndTextTransparent1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabEditBasicInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            
         }
 
         private void CheckDirectoryBttn_Click(object sender, EventArgs e)
         {
             TemplateToFields TTF = new TemplateToFields();
-            TTF.CheckDirectory();
+            TTF.WriteTemplateXML();
+
+            ButtonConstruct newButton = new ButtonConstruct();
+            newButton.CreateDynamicButton();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            XMLModule xRead = new XMLModule();
+
+            xRead.XReader();
         }
     }
 }
