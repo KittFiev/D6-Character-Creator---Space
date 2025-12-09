@@ -59,15 +59,5 @@ namespace D6_Character_Creator___Space.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _489b915b_7d35_437d_8577_5ca6f40cac40 {
-            get {
-                object obj = ResourceManager.GetObject("489b915b-7d35-437d-8577-5ca6f40cac40", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

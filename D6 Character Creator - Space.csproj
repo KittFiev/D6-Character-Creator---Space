@@ -93,12 +93,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Images\RDT_20251202_1456475627514914453615468.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Images\489b915b-7d35-437d-8577-5ca6f40cac40.jpg" />
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="Resources\Images\" />
     <Folder Include="Resources\Templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
