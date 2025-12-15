@@ -15,13 +15,15 @@ namespace D6_Character_Creator___Space
 
         List<NumericUpDown> DiceValueList;
         List<NumericUpDown> PipValueList;
+        List<NumericUpDown> AttributeValueList;
         public MainFormContainer()
         {
             InitializeComponent();
-            CreateButtonDelegate();
+            //CreateButtonDelegate();
 
             DiceValueList = new List<NumericUpDown>();
             PipValueList = new List<NumericUpDown>();
+            AttributeValueList = new List<NumericUpDown>();
 
             for (int z = 0; z < Skill_Table_Columns.ColumnCount; z++)
             {
@@ -35,13 +37,19 @@ namespace D6_Character_Creator___Space
 
                     for (int y = 0; y < sk_Table.RowCount; y++)
                     {
-
                         NumericUpDown sk_DiceCounter = (NumericUpDown)sk_Table.GetControlFromPosition(0, y);
-                        sk_DiceCounter.ValueChanged += TestValueChange;
-                        DiceValueList.Add(sk_DiceCounter);
+                        sk_DiceCounter.ValueChanged += SkillDiceValueChange;
+
+                        if (y == 0)
+                        {
+
+                            AttributeValueList.Add(sk_DiceCounter);
+
+                        }else
+                            DiceValueList.Add(sk_DiceCounter);
 
                         NumericUpDown sk_PipCounter = (NumericUpDown)sk_Table.GetControlFromPosition(1, y);
-                        sk_PipCounter.ValueChanged += TestValueChange;
+                        sk_PipCounter.ValueChanged += SkillDiceValueChange;
                         PipValueList.Add(sk_PipCounter);
 
                     }
@@ -51,11 +59,21 @@ namespace D6_Character_Creator___Space
             }
         }
 
-        private void TestValueChange(object sender, EventArgs e)
+        private void SkillDiceValueChange(object sender, EventArgs e)
         {
 
             float totalDiceValue = 0;
             float totalPipValue = 0;
+
+            foreach (NumericUpDown nud in AttributeValueList)
+            {
+                //bit dirty, but does the job. Due to unclear description in the rulebook, we're assuming the
+                //first point of all attributes is given for free as each attribute requires a minimum of 1
+                //Metaphysics is the exception due to starting at 0, which is why we need to subtract the min
+                //and clamp the other attributes using a Max function.
+                totalDiceValue += Math.Max( ((int)nud.Value - (int)nud.Minimum) * 4, 0 );
+
+            }
 
             foreach (NumericUpDown nud in DiceValueList)
             {

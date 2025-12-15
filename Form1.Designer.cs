@@ -66,7 +66,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.Available_Create_Points = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.UsedPointsTotal = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -308,7 +308,7 @@
             this.tabPage8.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Available_Create_Points)).BeginInit();
             this.panel5.SuspendLayout();
             this.CharacterSheetEditTable.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -666,7 +666,7 @@
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label4, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.UsedPointsTotal, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.numericUpDown1, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.Available_Create_Points, 0, 1);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             // 
             // label1
@@ -691,10 +691,10 @@
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
-            // numericUpDown1
+            // Available_Create_Points
             // 
-            resources.ApplyResources(this.numericUpDown1, "numericUpDown1");
-            this.numericUpDown1.Name = "numericUpDown1";
+            resources.ApplyResources(this.Available_Create_Points, "Available_Create_Points");
+            this.Available_Create_Points.Name = "Available_Create_Points";
             // 
             // label4
             // 
@@ -799,7 +799,22 @@
             // numericUpDown144
             // 
             resources.ApplyResources(this.numericUpDown144, "numericUpDown144");
+            this.numericUpDown144.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown144.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown144.Name = "numericUpDown144";
+            this.numericUpDown144.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // label93
             // 
@@ -1117,7 +1132,22 @@
             // numericUpDown32
             // 
             resources.ApplyResources(this.numericUpDown32, "numericUpDown32");
+            this.numericUpDown32.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown32.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown32.Name = "numericUpDown32";
+            this.numericUpDown32.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numericUpDown33
             // 
@@ -1292,7 +1322,22 @@
             // numericUpDown42
             // 
             resources.ApplyResources(this.numericUpDown42, "numericUpDown42");
+            this.numericUpDown42.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown42.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown42.Name = "numericUpDown42";
+            this.numericUpDown42.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numericUpDown41
             // 
@@ -1561,6 +1606,11 @@
             // numericUpDown74
             // 
             resources.ApplyResources(this.numericUpDown74, "numericUpDown74");
+            this.numericUpDown74.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
             this.numericUpDown74.Name = "numericUpDown74";
             // 
             // numericUpDown75
@@ -1748,7 +1798,22 @@
             // numericUpDown82
             // 
             resources.ApplyResources(this.numericUpDown82, "numericUpDown82");
+            this.numericUpDown82.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown82.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown82.Name = "numericUpDown82";
+            this.numericUpDown82.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numericUpDown83
             // 
@@ -2037,7 +2102,22 @@
             // numericUpDown100
             // 
             resources.ApplyResources(this.numericUpDown100, "numericUpDown100");
+            this.numericUpDown100.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown100.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown100.Name = "numericUpDown100";
+            this.numericUpDown100.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numericUpDown101
             // 
@@ -2341,7 +2421,22 @@
             // numericUpDown124
             // 
             resources.ApplyResources(this.numericUpDown124, "numericUpDown124");
+            this.numericUpDown124.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown124.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numericUpDown124.Name = "numericUpDown124";
+            this.numericUpDown124.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // numericUpDown125
             // 
@@ -2478,7 +2573,7 @@
             this.tableLayoutPanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Available_Create_Points)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.CharacterSheetEditTable.ResumeLayout(false);
@@ -2690,7 +2785,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown Available_Create_Points;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label UsedPointsTotal;
         private System.Windows.Forms.Label label1;
