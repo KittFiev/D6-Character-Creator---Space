@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module name="Example Template">
+  <skills>
+    <group name="Group1">
+      <skill>skillname</skill>
+    </group>
+    <group name="Group2">
+      <skill>skillname</skill>
+    </group>
+    <group name="PrototypeGroup?">
+      <skill>
+        <name>skillname</name>
+        <description>basic description</description>
+        <dicecount>10</dicecount>
+      </skill>
+    </group>
+  </skills>
+</module>

@@ -36,6 +36,7 @@ namespace D6_Character_Creator___Space
 
                 await writer.WriteStartElementAsync(null, "module", null);
                 await writer.WriteAttributeStringAsync(null, "name", null, "Example Template");
+                await writer.WriteAttributeStringAsync(null, "secondthing", null, "looks like this");
                     await writer.WriteStartElementAsync(null, "skills", null);
                     await writer.WriteAttributeStringAsync(null, "group", null, "strength");
 

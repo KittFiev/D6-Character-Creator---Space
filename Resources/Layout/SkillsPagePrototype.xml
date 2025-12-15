@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module name="Skill Slots">
+  <title>
+    <updowncounter>
+      <settings>
+        <name>skilldice</name>
+        <size>47,20</size>
+        <location>0,0</location>
+      </settings>
+    </updowncounter>
+    <updowncounter>
+      <settings>
+        <name>pipdice</name>
+        <size>47,20</size>
+        <location>50,0</location>
+      </settings>
+    </updowncounter>
+    <label>
+      <settings>
+        <name>titleLabel</name>
+        <location></location>
+        <></>
+        <></>
+        <></>
+      </settings>
+    </label>
+  </title>
+</module>

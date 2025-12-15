@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<module name="Example Template">
+<module name="Example Template" secondthing="looks like this">
   <skills group="strength">
     <skill>Punchy</skill>
   </skills>

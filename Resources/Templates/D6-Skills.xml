@@ -20,5 +20,20 @@
       <skill>stamina</skill>
       <skill>swim</skill>
     </group>
+    <group name="Knowledge">
+      <skill>aliens</skill>
+      <skill>astrography</skill>
+      <skill>bureaucracy</skill>
+      <skill>business</skill>
+      <skill>cultures</skill>
+      <skill>intimidation</skill>
+      <skill>languages</skill>
+      <skill>scholar</skill>
+      <skill>security regulations</skill>
+      <skill>streetwise</skill>
+      <skill>survival</skill>
+      <skill>tactics</skill>
+      <skill>willpower</skill>
+    </group>
   </skills>
 </module>
