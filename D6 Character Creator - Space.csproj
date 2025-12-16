@@ -55,14 +55,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SRD_Advantage_Format.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SRD_Advantage_Format.Designer.cs">
+      <DependentUpon>SRD_Advantage_Format.cs</DependentUpon>
+    </Compile>
     <Compile Include="XMLModule.cs" />
     <Compile Include="TemplateToFields.cs" />
-    <Compile Include="TransparentTextField.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TransparentTextField.Designer.cs">
-      <DependentUpon>TransparentTextField.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,8 +76,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TransparentTextField.resx">
-      <DependentUpon>TransparentTextField.cs</DependentUpon>
+    <EmbeddedResource Include="SRD_Advantage_Format.resx">
+      <DependentUpon>SRD_Advantage_Format.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

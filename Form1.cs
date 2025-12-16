@@ -16,10 +16,27 @@ namespace D6_Character_Creator___Space
         List<NumericUpDown> DiceValueList;
         List<NumericUpDown> PipValueList;
         List<NumericUpDown> AttributeValueList;
+        XMLModule _xmlMod;
         public MainFormContainer()
         {
             InitializeComponent();
             //CreateButtonDelegate();
+
+            List<List<string>> SRD_Adv_Form = new List<List<string>>();
+            _xmlMod = new XMLModule();
+
+            SRD_Adv_Form = _xmlMod.AdvantageLoader();
+
+            for (int i = 0; i < SRD_Adv_Form.Count; i++)
+            {
+
+                srD_Advantage_Format1.AdvSource(SRD_Adv_Form[i][0].ToString());
+                srD_Advantage_Format1.AdvName(SRD_Adv_Form[i][1].ToString());
+                srD_Advantage_Format1.AdvCost(SRD_Adv_Form[i][2].ToString());
+                srD_Advantage_Format1.AdvDescription(SRD_Adv_Form[i][3].ToString());
+                srD_Advantage_Format1.AdvRestrictions(SRD_Adv_Form[i][4].ToString());
+
+            }
 
             DiceValueList = new List<NumericUpDown>();
             PipValueList = new List<NumericUpDown>();
@@ -61,14 +78,16 @@ namespace D6_Character_Creator___Space
 
         private void SkillDiceValueChange(object sender, EventArgs e)
         {
-
+            //Gonna need to add Skill Specializations eventually.
+            //Might do doable if I turn each skill position into a tablelayoutpanel and add a + and X button for each row
+            //Each row will have a single NumericUpDown and a text field to put in what the specialization is for
             float totalDiceValue = 0;
             float totalPipValue = 0;
 
             foreach (NumericUpDown nud in AttributeValueList)
             {
-                //bit dirty, but does the job. Due to unclear description in the rulebook, we're assuming the
-                //first point of all attributes is given for free as each attribute requires a minimum of 1
+                //bit dirty, but does the job. Due to unclear description in the rulebook, I'm assuming the
+                //first point of all attributes is given for free as each attribute requires a minimum of 1.
                 //Metaphysics is the exception due to starting at 0, which is why we need to subtract the min
                 //and clamp the other attributes using a Max function.
                 totalDiceValue += Math.Max( ((int)nud.Value - (int)nud.Minimum) * 4, 0 );
@@ -98,9 +117,7 @@ namespace D6_Character_Creator___Space
         private void CreateButtonDelegate()
         {
 
-            XMLModule xRead = new XMLModule();
-
-            List<List<string>> t1_List = xRead.XReader();
+            List<List<string>> t1_List = _xmlMod.XReader();
             Console.WriteLine(t1_List[0][1]);
 
             int pos = 41;
@@ -177,9 +194,8 @@ namespace D6_Character_Creator___Space
 
         private void button1_Click(object sender, EventArgs e)
         {
-            XMLModule layoutRead = new XMLModule();
 
-            layoutRead.LayoutBuilder();
+            _xmlMod.LayoutBuilder();
 
         }
 

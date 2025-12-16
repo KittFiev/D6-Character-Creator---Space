@@ -13,6 +13,93 @@ namespace D6_Character_Creator___Space
         List<List<string>> t_Items;
         List<List<string>> layout_Nodes;
 
+        List<List<string>> AdvantageList;
+
+        public List<List<string>> AdvantageLoader()
+        {
+
+            XmlTextReader reader = null;
+
+            string workingDirectory = Environment.CurrentDirectory;
+            string templatesDirectory = Directory.GetParent(workingDirectory).Parent.FullName + "/Resources/Templates/";
+
+            AdvantageList = new List<List<string>>();
+
+            try
+            {
+
+                reader = new XmlTextReader(templatesDirectory + "D6-Advantages.xml"); //replace this with a document selector
+                reader.WhitespaceHandling = WhitespaceHandling.None;
+
+                XmlDocument xDoc = new XmlDocument();
+                xDoc.Load(reader);
+
+                
+
+                XmlNodeList NodeList = xDoc.SelectNodes("/module");
+
+                for (int i = 0; i < NodeList.Count; i++)
+                {
+                    
+                    XmlNodeList advNodes = NodeList[i].ChildNodes;
+
+                    for (int y = 0; y < advNodes.Count; y++)
+                    {
+                        List<string> advBuild = new List<string>();
+
+                        if (advNodes[y].Name.ToString() == "advantage")
+                        {
+
+                            advBuild.Add(NodeList[i].Attributes["name"].Value);
+                            advBuild.Add(advNodes[y].Attributes["name"].Value);
+                            advBuild.Add(advNodes[y].Attributes["cost"].Value);
+                            XmlNodeList advChildNodes = advNodes[y].ChildNodes;
+
+                            for (int z = 0; z < advChildNodes.Count; z++)
+                            {
+
+                                if (advChildNodes[z].Name.ToString() == "description")
+                                {
+
+                                    advBuild.Add(advChildNodes[z].InnerText.ToString());
+
+                                }
+
+                                if (advChildNodes[z].Name.ToString() == "restrictions")
+                                {
+
+                                    advBuild.Add(advChildNodes[z].InnerText.ToString());
+
+                                }
+
+                            }
+
+                        }
+
+                        AdvantageList.Add(advBuild);
+
+                    }
+
+                }
+                
+
+            }
+            finally
+            {
+
+                if (reader != null)
+                {
+
+                    reader.Close();
+
+                }
+
+            }
+
+            return AdvantageList;
+
+        }
+
         //this is my first time returning anything from a method in a separate class
         //don't judge me ;3;
         public List<List<string>> XReader()
